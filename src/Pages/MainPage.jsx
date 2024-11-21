@@ -66,7 +66,7 @@ function Home() {
               className="text-white hover:text-blue-400 transition duration-300"
               onClick={() => scrollToSection("achievements")}
             >
-              Works & Education
+              Carrer
             </button>
             <button
               className="text-white hover:text-blue-400 transition duration-300"
@@ -133,7 +133,7 @@ function Home() {
         setIsMenuOpen(false);
       }}
     >
-      Works & Education
+      Carrer
     </button>
     <button
       className="block text-white text-left hover:text-blue-400 transition duration-300"

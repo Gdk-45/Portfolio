@@ -144,8 +144,8 @@ const AchievementsTable = () => {
   ];
 
   const skills = [
-    'React', 'Node.js', 'Express.js', 'MongoDB', 'Java', 'Spring Boot', 'MySQL', 
-    'Solidity', 'Ethereum', 'Blockchain', 'Web3', 'Git', 'JavaScript', 'HTML5', 
+    'React', 'Node.js', 'Express.js', 'MongoDB', 'Java', 'MySQL', 
+    'Solidity', 'Ethereum', 'Blockchain', 'Web3', 'Git', 'JavaScript', 'HTML5', 'Next','Gsap',
     'CSS3', 'Tailwind CSS', 'Redux', 'TypeScript', 'Python', 'PyQt5', 'LeetCode', 'Problem Solving'
   ];
 
