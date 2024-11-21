@@ -1,8 +1,6 @@
-
 import { message as antdMessage } from "antd";
-import { Form, Input, Button } from "antd";
-
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -23,27 +21,28 @@ export function Contact() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
+      // EmailJS send function
+      const result = await emailjs.send(
+        "service_fkqbbpi", // Replace with your service ID
+        "template_9xttwk9", // Replace with your template ID
+        {
+          from_name: formData.name,
+          reply_to: formData.email,
+          subject: formData.subject,
+          message: formData.message,
         },
-        body: JSON.stringify({
-          ...formData,
-          access_key: "b1276d8d-fd3d-4214-bb59-08562448ebbd",
-        }),
-      });
+        "Qnx8Bn4NH1yc2Wyd7" // Replace with your user ID
+      );
 
-      const result = await response.json();
-      if (result.success) {
-       antdMessage.success("✅Message sent successfully!");
+      if (result.status === 200) {
+        antdMessage.success("Message sent successfully!");
         setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
-        alert("Failed to send message. Please try again.");
+        antdMessage.error("Failed to send message. Please try again.");
       }
     } catch (error) {
-      alert("An error occurred. Please try again later.");
+      console.error(error);
+      antdMessage.error("An error occurred. Please try again later.");
     } finally {
       setIsSubmitting(false);
     }
@@ -53,15 +52,12 @@ export function Contact() {
     <div className="w-full mx-auto p-6 md:p-8 rounded-lg shadow-lg backdrop-blur-lg">
       <h2 className="text-3xl font-light text-neutral-200">Contact Me</h2>
       <p className="text-sm mt-2 text-neutral-300">
-        I build beautiful website like this one
+        I build beautiful websites like this one.
       </p>
       <p className="text-sm mt-2 text-neutral-300">
         Feel free to reach out for projects, collaborations, or any queries.
       </p>
-      <form
-        onSubmit={handleSubmit}
-        className="my-6 space-y-4"
-      >
+      <form onSubmit={handleSubmit} className="my-6 space-y-4">
         {/* Name Field */}
         <div>
           <label htmlFor="name" className="block text-white mb-1">
