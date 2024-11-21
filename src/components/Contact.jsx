@@ -35,7 +35,7 @@ export function Contact() {
       );
 
       if (result.status === 200) {
-        antdMessage.success("Message sent successfully!");
+        antdMessage.success("Got it! I’ll get back to you in no time. Thanks for getting in touch!");
         setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
         antdMessage.error("Failed to send message. Please try again.");
