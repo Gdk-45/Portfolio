@@ -1,6 +1,6 @@
 
 import React from 'react'
-import './Svg.css'
+
 function Svg() {
   return (
      <div className='flex justify-start items-start'>

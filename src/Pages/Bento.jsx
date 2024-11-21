@@ -108,19 +108,18 @@ const AchievementsTable = () => {
 
   const experience = [
     {
-      year: '2024',
-      title: 'Full Stack Developer Intern',
-      description:
-        'Worked as a full-stack developer intern at XYZ Company, developing web applications using React and Node.js.',
-      technologies: ['React', 'Node.js', 'Express.js', 'MongoDB'],
-    },
-    {
-      year: '2023',
-      title: 'Java Developer Intern',
-      description:
-        'Worked as a Java developer intern at ABC Technologies, building Java-based backend services and APIs.',
-      technologies: ['Java', 'Spring Boot', 'MySQL'],
-    },
+  "year": "2024",
+  "title": "Full Stack Developer Intern",
+  "description": "Worked as a full-stack developer intern at BlackBucks Company, developing web applications using React and Node.js. Focused on understanding client-server architecture and creating responsive designs, particularly emphasizing frontend development. Gained experience with various UI frameworks such as Ant Design, Material-UI, and Chakra UI. Additionally, learned API testing using Postman, resolved Git conflicts, and collaborated effectively with a team.",
+  "technologies": ["React", "Node.js", "Express.js", "MongoDB", "Ant Design", "Material-UI", "Chakra UI", "Postman", "Git"]
+},
+   {
+  "year": "2023",
+  "title": "Java Developer Intern",
+  "description": "Worked as a Java developer intern at Henotic Technologies, building Java-based backend services and APIs. Additionally, focused on frontend development using JavaFX and Java Swing. Developed a Sudoku game project, gaining hands-on experience in desktop application development. Utilized backtracking algorithms to implement the solution for the Sudoku problem, enhancing problem-solving and backend development skills.",
+  "technologies": ["Java","JavaFX", "Java Swing", "Backtracking"]
+}
+
   ];
 
   const education = [

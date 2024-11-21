@@ -1,16 +1,18 @@
 import React from "react";
 import { YoutubeOutlined, LinkedinOutlined, GithubOutlined, MobileOutlined } from '@ant-design/icons';
 import { Tooltip } from 'antd';
-
+import animationData1 from "../assets/Animation - 1731684875975.json";
+import Lottie from "lottie-react";
 const SocialLinks = () => {
   return (
     <div data-aos="zoom-in">
       <div className="flex flex-col h-[50vh] justify-center items-center">
-        <iframe
+        <Lottie 
+          animationData={animationData1}
           className="w-[30%] h-[50%]"
-          src="https://lottie.host/embed/d97f9e0f-2597-4c14-aea3-e8515f3677ff/1bPvzvC4RV.json"
-          title="Lottie Animation 2"
+          loop={true}
         />
+
         <div className="text-blue-500">Want to know more..?</div>
 
         <div className="flex space-x-6 mt-6">
