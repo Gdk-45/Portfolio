@@ -152,7 +152,7 @@ const AchievementsTable = () => {
   return (
     <div className="h-full flex flex-col p-4 md:p-6 lg:p-10 space-y-16 backdrop-blur-lg">
       {/* Education Section */}
-      <div className="h-auto">
+      <div id="work" className="h-auto pt-8">
   <h1 className="text-3xl md:text-3xl lg:text-5xl font-light mt-12 mb-6 text-center text-white">
     Works
   </h1>
@@ -193,7 +193,7 @@ const AchievementsTable = () => {
     ))}
   </div>
 </div>
-      <div className="h-auto">
+      <div id="skills" className="h-auto pt-8">
   <h1 className="text-3xl md:text-3xl lg:text-5xl font-light mt-12 mb-6 text-center text-white">
     Skills
   </h1>
@@ -211,7 +211,7 @@ const AchievementsTable = () => {
   </div>
 </div>
 
-      <div className="h-auto">
+      <div id="edu" className="h-auto pt-8">
         <h1 className="text-3xl md:text-3xl lg:text-5xl font-light mt-12 mb-6 text-center text-white">
           Education
         </h1>
@@ -245,7 +245,7 @@ const AchievementsTable = () => {
           ))}
         </div>
       </div>
-      <div className="relative h-auto backdrop-blur-lg">
+      <div id="Exp" className="h-auto pt-8 backdrop-blur-lg">
         <h1 className="text-3xl md:text-3xl lg:text-5xl font-light mt-12 mb-6 text-center text-white">
           Experience
         </h1>
@@ -290,7 +290,7 @@ const AchievementsTable = () => {
       </div>
 
       {/* Achievements Section */}
-      <div className="h-auto">
+      <div id="Ach" className="h-auto pt-8 backdrop-blur-lg">
         <h1 className="text-3xl md:text-3xl lg:text-5xl font-light mt-12 mb-6 text-center text-white">
           Achievements
         </h1>

@@ -3,5 +3,11 @@
 @tailwind utilities;
 body{
   overflow-x: hidden;  
-  cursor: url('./assets/cursor.svg') 20 20, default;
+  cursor: url('./assets/cursor.svg') 10 10, default;
+}
+body button{
+   cursor: url('./assets/left-click.svg') 10 10 pointer;
+}
+#navbar {
+  cursor: url('./assets/navigator.svg') 10 10 default;
 }
