@@ -159,9 +159,9 @@ function Home() {
             />
           </div>
           <div className="flex flex-col w-full align-middle items-center justify-center gap-5 p-10" data-aos="fade-right">
-            <div className="text-left w-full text-5xl font-light text-white mx-auto">I am Ajay Dattu</div>
             <div className="text-base w-full text-left sm:text-lg md:text-xl lg:text-2xl font-light text-gray-400 max-w-3xl mx-auto">
-              <p className="flex flex-col">
+              <div className="flex flex-col gap-5">
+                <p className="text-left w-full md:text-3x lg:text-5xl font-light text-white mx-auto">I am Ajay Dattu</p>
                 <p>I specialize in building beautiful, interactive web applications using modern
                 technologies like Nextjs, Reactjs, Animation Libraries, UI Libraries, and Tailwind
                 CSS. I constantly explore new tools and frameworks to create optimized user
@@ -169,11 +169,11 @@ function Home() {
                 </p>
                 <a
                 href="https://drive.google.com/file/d/19_1CEIwt8tDtM3fTVHtiYMXePjqXLmhz/view?usp=sharing"
-                className="mt-6 text-lg sm:text-xl md:text-2xl lg:text-3xl text-neutral-100 cursor-pointer hover:underline"
+                className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-neutral-100 cursor-pointer hover:underline"
               >
                 Download Resume
               </a>
-              </p>
+              </div>
               
             </div>
           </div>
