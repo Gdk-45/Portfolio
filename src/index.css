@@ -3,4 +3,5 @@
 @tailwind utilities;
 body{
   overflow-x: hidden;  
+  cursor: url('./assets/cursor.svg') 20 20, default;
 }

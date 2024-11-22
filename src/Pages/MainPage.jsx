@@ -150,29 +150,31 @@ function Home() {
         )}
       </nav>
       <div id="home" className="h-screen relative flex flex-col pt-20">
-        <div className="flex flex-col lg:flex-row w-full h-full pt-20" data-aos="fade-left">
-          <div className="flex-1 w-full h-64 lg:h-auto">
+        <div className="flex flex-col lg:flex-row w-full h-full md:gap-5 lg:gap-0" data-aos="fade-left">
+          <div className="flex w-full h-64 lg:h-auto align-middle items-center justify-center">
             <Lottie
               animationData={animationData1}
               loop={true}
-              className="w-full h-[80%] opacity-75 rounded-md"
+              className="w-full h-[60%] opacity-75 rounded-md"
             />
           </div>
-          <div className="flex flex-col gap-6 md:pt-0 lg:pt-20" data-aos="fade-right">
-            <div className="text-5xl font-light text-white">I am Ajay Dattu</div>
-            <div className="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl font-light text-gray-400 max-w-3xl mx-auto">
-              <p>
-                I specialize in building beautiful, interactive web applications using modern
+          <div className="flex flex-col w-full align-middle items-center justify-center gap-5 p-10" data-aos="fade-right">
+            <div className="text-left w-full text-5xl font-light text-white mx-auto">I am Ajay Dattu</div>
+            <div className="text-base w-full text-left sm:text-lg md:text-xl lg:text-2xl font-light text-gray-400 max-w-3xl mx-auto">
+              <p className="flex flex-col">
+                <p>I specialize in building beautiful, interactive web applications using modern
                 technologies like Nextjs, Reactjs, Animation Libraries, UI Libraries, and Tailwind
                 CSS. I constantly explore new tools and frameworks to create optimized user
                 experiences.
-              </p>
-              <a
+                </p>
+                <a
                 href="https://drive.google.com/file/d/19_1CEIwt8tDtM3fTVHtiYMXePjqXLmhz/view?usp=sharing"
                 className="mt-6 text-lg sm:text-xl md:text-2xl lg:text-3xl text-neutral-100 cursor-pointer hover:underline"
               >
                 Download Resume
               </a>
+              </p>
+              
             </div>
           </div>
         </div>

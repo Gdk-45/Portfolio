@@ -198,7 +198,7 @@ const AchievementsTable = () => {
     Skills
   </h1>
   <div className="relative space-y-6 md:space-y-8" data-aos="fade-left">
-    <div className="flex flex-wrap gap-6 justify-center sm:justify-start p-10">
+    <div className="flex flex-wrap gap-6 justify-center sm:justify-start p-20">
       {skills.map((skill, index) => (
         <span
           key={index}
