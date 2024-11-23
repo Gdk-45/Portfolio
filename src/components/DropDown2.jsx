@@ -16,7 +16,6 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 
 export const ShiftingDropDown2 = () => {
-     
   return (
     <div className="flex h-full w-full justify-start text-neutral-200 md:justify-center">
       <Tabs />
@@ -41,7 +40,7 @@ const Tabs = () => {
   return (
     <div
       onMouseLeave={() => handleSetSelected(null)}
-      className="relative flex h-fit gap-2"
+      className="relative flex h-fit gap-1"
     >
       {TABS.map((t) => {
         return (
@@ -69,7 +68,7 @@ const Tab = ({ children, tab, handleSetSelected, selected }) => {
       id={`shift-tab-${tab}`}
       onMouseEnter={() => handleSetSelected(tab)}
       onClick={() => handleSetSelected(tab)}
-      className={`flex items-center gap-1 rounded-full px-3 py-1.5 text-sm transition-colors ${
+      className={`flex items-center gap-1 rounded px-2 py-1 text-xs transition-colors ${
         selected === tab
           ? " bg-neutral-800 text-neutral-100"
           : "text-neutral-400"
@@ -101,7 +100,7 @@ const Content = ({ selected, dir }) => {
         opacity: 0,
         y: 8,
       }}
-      className="absolute left-0 top-[calc(100%_+_24px)] w-96 rounded-lg border border-neutral-600 bg-gradient-to-b from-neutral-900 via-neutral-900 to-neutral-800 p-4"
+      className="absolute left-0 top-[calc(100%_+_16px)] w-72 rounded-md border border-neutral-600 bg-gradient-to-b from-neutral-900 via-neutral-900 to-neutral-800 p-2"
     >
       <Bridge />
       <Nub selected={selected} />
@@ -113,7 +112,7 @@ const Content = ({ selected, dir }) => {
               <motion.div
                 initial={{
                   opacity: 0,
-                  x: dir === "l" ? 100 : dir === "r" ? -100 : 0,
+                  x: dir === "l" ? 80 : dir === "r" ? -80 : 0,
                 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.25, ease: "easeInOut" }}
@@ -129,7 +128,7 @@ const Content = ({ selected, dir }) => {
 };
 
 const Bridge = () => (
-  <div className="absolute -top-[24px] left-0 right-0 h-[24px]" />
+  <div className="absolute -top-[16px] left-0 right-0 h-[16px]" />
 );
 
 const Nub = ({ selected }) => {
@@ -162,26 +161,12 @@ const Nub = ({ selected }) => {
       }}
       animate={{ left }}
       transition={{ duration: 0.25, ease: "easeInOut" }}
-      className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-tl border border-neutral-600 bg-neutral-900"
+      className="absolute left-1/2 top-0 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-tl border border-neutral-600 bg-neutral-900"
     />
   );
 };
 
-
 const Pricing = () => {
-    const [showScrollButton, setShowScrollButton] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  useEffect(() => {
-    
-
-    const handleScroll = () => {
-      setShowScrollButton(window.scrollY > 300);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
@@ -189,74 +174,48 @@ const Pricing = () => {
     }
   };
   return (
-    <div className="grid grid-cols-3 gap-4 divide-x divide-neutral-700">
-      <div
-        onClick={() => scrollToSection("work") }
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-      >
-        <FiBriefcase className="mb-2 text-xl text-indigo-300" />
-        <span className="text-xs">works</span>
-      </div>
-      <div
-        onClick={() => scrollToSection("skills") }
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-      >
-        <FiBarChart2 className="mb-2 text-xl text-indigo-300" />
-        <span className="text-xs">Skills</span>
-      </div>
-      <div
-        onClick={() => scrollToSection("edu")}
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-      >
-        <FiBookOpen className="mb-2 text-xl text-indigo-300" />
-        <span className="text-xs">Education</span>
-      </div>
-      <div
-        onClick={() => scrollToSection("Exp")}
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-      >
-        <FiUser className="mb-2 text-xl text-indigo-300" />
-        <span className="text-xs">Experience</span>
-      </div>
-      <div
-         onClick={() => scrollToSection("Ach")}
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-      >
-        <FiAward className="mb-2 text-xl text-indigo-300" />
-        <span className="text-xs">Achievements</span>
-      </div>
-       <div
-         onClick={() => scrollToSection("contact")}
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-      >
-        <FiPhone className="mb-2 text-xl text-indigo-300" />
-        <span className="text-xs">Contact</span>
-      </div>
-       <div
-         onClick={() => scrollToSection("About")}
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-      >
-        <FiActivity className="mb-2 text-xl text-indigo-300" />
-        <span className="text-xs">About</span>
-      </div>
+    <div className="grid grid-cols-3 gap-2 divide-x divide-neutral-700">
+      {MENU_ITEMS.map((item) => (
+        <div
+          key={item.id}
+          onClick={() => scrollToSection(item.id)}
+          className="flex w-full flex-col items-center justify-center py-1 text-neutral-400 transition-colors hover:text-neutral-50"
+        >
+          {item.icon}
+          <span className="text-xs">{item.label}</span>
+        </div>
+      ))}
     </div>
   );
 };
+
+const MENU_ITEMS = [
+  { id: "work", label: "Works", icon: <FiBriefcase className="mb-1 text-base text-indigo-300" /> },
+  { id: "skills", label: "Skills", icon: <FiBarChart2 className="mb-1 text-base text-indigo-300" /> },
+  { id: "edu", label: "Education", icon: <FiBookOpen className="mb-1 text-base text-indigo-300" /> },
+  { id: "Exp", label: "Experience", icon: <FiUser className="mb-1 text-base text-indigo-300" /> },
+  { id: "Ach", label: "Achievements", icon: <FiAward className="mb-1 text-base text-indigo-300" /> },
+  { id: "contact", label: "Contact", icon: <FiPhone className="mb-1 text-base text-indigo-300" /> },
+  { id: "About", label: "About", icon: <FiActivity className="mb-1 text-base text-indigo-300" /> },
+];
+
 const Blog = () => {
   return (
     <div>
       <div className="grid grid-cols-1 gap-2">
-        {/* First Blog Post */}
-        <iframe src="https://www.youtube.com/embed/rk7jC7I7KRQ?si=FCWlbhOut700_D7N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <h4 className="mb-0.5 text-sm font-medium">DSA with jay: C++ Stl</h4>
-          <p className="text-xs text-neutral-400">
-            In this video, I break down the basics of STL in C++ and their applications in solving real-life problems.
-            Learn how to efficiently handle STL data structures, access elements, and use STL algorithms.
-          </p>
+        <iframe
+          src="https://www.youtube.com/embed/rk7jC7I7KRQ?si=FCWlbhOut700_D7N"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          className="w-full h-36"
+        ></iframe>
+        <h4 className="mb-0.5 text-xs font-medium">DSA with Jay: C++ STL</h4>
+        <p className="text-xs text-neutral-400">
+          Learn the basics of STL in C++ and their applications in solving problems.
+        </p>
       </div>
-      
-      {/* View more button */}
-      <button className="ml-auto mt-4 flex items-center gap-1 text-sm text-indigo-300">
+      <button className="ml-auto mt-4 flex items-center gap-1 text-xs text-indigo-300">
         <a href="https://www.youtube.com/@Dsa_withjay">View more</a>
         <FiArrowRight />
       </button>
@@ -264,14 +223,13 @@ const Blog = () => {
   );
 };
 
-
 const TABS = [
   {
     title: "Menu",
     Component: Pricing,
   },
   {
-    title: "Youtube",
+    title: "YouTube",
     Component: Blog,
   },
 ].map((n, idx) => ({ ...n, id: idx + 1 }));
