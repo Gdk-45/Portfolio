@@ -88,7 +88,7 @@ function Home() {
       </div>
       <div
         id="contact"
-        className="h-full p-6 flex flex-col lg:flex-row items-center lg:items-stretch lg:space-x-6"
+        className="h-full p-6 flex flex-col lg:flex-row items-center lg:items-stretch lg:space-x-6 backdrop-blur-sm"
       >
         <div className="flex-1 w-full h-64 lg:h-auto">
           <Lottie
@@ -102,7 +102,7 @@ function Home() {
         </div>
       </div>
 
-      <div data-aos="zoom-in">
+      <div data-aos="zoom-in" className="backdrop-blur-sm">
         <SocialLinks />
       </div>
 
