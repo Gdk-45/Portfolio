@@ -10,10 +10,12 @@ import {
   FiTool, 
   FiBookOpen,
   FiBriefcase,
+  FiActivity,
+  FiPhone,
 } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
 
-export const ShiftingDropDown = () => {
+export const ShiftingDropDown2 = () => {
      
   return (
     <div className="flex h-full w-full justify-start text-neutral-200 md:justify-center">
@@ -223,6 +225,20 @@ const Pricing = () => {
         <FiAward className="mb-2 text-xl text-indigo-300" />
         <span className="text-xs">Achievements</span>
       </div>
+       <div
+         onClick={() => scrollToSection("contact")}
+        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+      >
+        <FiPhone className="mb-2 text-xl text-indigo-300" />
+        <span className="text-xs">Contact</span>
+      </div>
+       <div
+         onClick={() => scrollToSection("About")}
+        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+      >
+        <FiActivity className="mb-2 text-xl text-indigo-300" />
+        <span className="text-xs">About</span>
+      </div>
     </div>
   );
 };
@@ -251,7 +267,7 @@ const Blog = () => {
 
 const TABS = [
   {
-    title: "Carrer",
+    title: "Menu",
     Component: Pricing,
   },
   {
@@ -259,80 +275,3 @@ const TABS = [
     Component: Blog,
   },
 ].map((n, idx) => ({ ...n, id: idx + 1 }));
-//   <nav className="w-full bg-white/10 backdrop-blur-md shadow-lg z-50 rounded-md" id='navbar'>
-//         <div
-//           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16"
-//           data-aos="fade-in"
-//         >
-//           <div
-//             className="text-lg font-bold text-white cursor-pointer text-left"
-//             onClick={() => scrollToSection("home")}
-//           >
-//             Damo
-//           </div>
-
-//           {/* Desktop Menu */}
-//           <div className="hidden md:flex space-x-6">
-//             <button
-//               className="text-neutral-400 font-light hover:text-neutral-100 transition duration-300"
-//               onClick={() => scrollToSection("About")}
-//             >
-//               About
-//             </button>
-    
-//               <ShiftingDropDown/>
-
-//             <button
-//               className="text-neutral-400 font-light hover:text-neutral-100 transition duration-300"
-//               onClick={() => scrollToSection("contact")}
-//             >
-//               Contact
-//             </button>
-//           </div>
-
-//           {/* Mobile Menu Toggle */}
-//           <div className="md:hidden">
-//             <Menu/>
-//           </div>
-          
-//         </div>
-
-//         {isMenuOpen && (
-//           <div
-//   className={`md:hidden bg-white/10 w-full h-screen backdrop-blur-md shadow-lg z-40 rounded-lg mt-2 transform transition-transform duration-300 ease-out ${
-//     isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0 pointer-events-none"
-//   }`}
-// >
-//   <div className="flex flex-col gap-10 w-full h-full iteams-center text-5xl justify-center  space-y-2 py-3 px-4">
-//     <button
-//       className="block text-white text-left hover:text-blue-400 transition duration-300"
-//       onClick={() => {
-//         scrollToSection("About");
-//         setIsMenuOpen(false);
-//       }}
-//     >
-//       About
-//     </button>
-//     <button
-//       className="block text-white text-left hover:text-blue-400 transition duration-300"
-//       onClick={() => {
-//         scrollToSection("achievements");
-//         setIsMenuOpen(false);
-//       }}
-//     >
-//       Carrer
-//     </button>
-//     <button
-//       className="block text-white text-left hover:text-blue-400 transition duration-300"
-//       onClick={() => {
-//         scrollToSection("contact");
-//         setIsMenuOpen(false);
-//       }}
-//     >
-//       Contact
-//     </button>
-//   </div>
-// </div>
-
-//         )}
-//       </nav>
