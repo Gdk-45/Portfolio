@@ -39,7 +39,7 @@ function Home() {
 
   return (
     <main className="h-full flex flex-col bg-black overflow-x-hidden">
-      <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center align-middle">
+      <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center align-middle opacity-40">
       <div className="w-52 h-52 pulse bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 opacity-80">
           <span style={{ "--i": 0 }}></span>
           <span style={{ "--i": 1 }}></span>
