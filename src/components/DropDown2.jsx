@@ -161,7 +161,7 @@ const Nub = ({ selected }) => {
       }}
       animate={{ left }}
       transition={{ duration: 0.25, ease: "easeInOut" }}
-      className="absolute left-1/2 top-0 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-tl border border-neutral-600 bg-neutral-900"
+      className="absolute left-1/2 top-0 h-3 w-3 -translate-x-1/2 -translate-y-1/2 opacity-0 rotate-45 rounded-tl border border-neutral-600 bg-neutral-900"
     />
   );
 };
