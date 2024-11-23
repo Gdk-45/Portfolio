@@ -9,6 +9,7 @@ import { Contact } from "../components/Contact";
 import VideoFrame from "../components/VideoFrame";
 import SocialLinks from "../components/SocialLinks";
 import Navbar from "../components/Navbar";
+import './Pulse.css'
 
 function Home() {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -38,13 +39,20 @@ function Home() {
 
   return (
     <main className="h-full flex flex-col bg-black overflow-x-hidden">
-      <div className="fixed top-0 left-0 w-full h-full">
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 opacity-80 animate-pulse filter blur-xl"></div>
+      <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center align-middle">
+      <div className="w-52 h-52 pulse bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 opacity-80">
+          <span style={{ "--i": 0 }}></span>
+          <span style={{ "--i": 1 }}></span>
+          <span style={{ "--i": 2 }}></span>
+          <span style={{ "--i": 3 }}></span>
+      </div>
+ 
+          {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 opacity-80 animate-pulse filter blur-xl"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full border-4 border-white opacity-40 animate-spin-slow"></div>
-          <div className="absolute w-full h-full backdrop-blur-md"></div>
+          <div className="absolute w-full h-full backdrop-blur-md"></div> */}
         </div>
       <Navbar/>
-      <div id="home" className="h-screen relative flex flex-col pt-20">
+      <div id="home" className="h-screen relative flex flex-col pt-20 backdrop-blur-md">
         <div className="flex flex-col lg:flex-row w-full h-full md:gap-5 lg:gap-0" data-aos="fade-left">
           <div className="flex w-full h-64 lg:h-auto align-middle items-center justify-center">
             <Lottie
