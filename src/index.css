@@ -11,3 +11,8 @@ body button{
 #navbar {
   cursor: url('./assets/navigator.svg') 10 10 default;
 }
+#tel{
+  font-family: "Ponnala", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}

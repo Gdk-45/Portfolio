@@ -52,7 +52,7 @@ function Home() {
           <div className="absolute w-full h-full backdrop-blur-md"></div> */}
         </div>
       <Navbar/>
-      <div id="home" className="h-screen relative flex flex-col pt-20 backdrop-blur-md">
+      <div id="home" className="h-screen relative flex flex-col pt-20 backdrop-blur-sm">
         <div className="flex flex-col lg:flex-row w-full h-full md:gap-5 lg:gap-0" data-aos="fade-left">
           <div className="flex w-full h-64 lg:h-auto align-middle items-center justify-center">
             <Lottie

@@ -32,7 +32,7 @@ function Navbar() {
     <div className='fixed w-full z-20 flex justify-center items-center align-middle p-5'>
     <nav className="w-[85%] bg-white/10 backdrop-blur-md shadow-lg z-50 rounded-[30px]" id='navbar'>
         <div
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16"
+          className="max-w-7xl mx-auto p-5 flex items-center justify-between h-16"
           data-aos="fade-in"
         >
           
@@ -60,10 +60,11 @@ function Navbar() {
             <ShiftingDropDown2/>
            </div>
           <div
-            className="text-lg font-bold text-white cursor-pointer text-left"
+            className="text-lg font-blod font-serif text-white cursor-pointer text-left bg-[#455CE9] rounded-[30px] text-white p-2 px-2 py-2"
             onClick={() => scrollToSection("home")}
+            id='tel'
           >
-            Damo
+          అజయ్          
           </div>
 
         </div>
