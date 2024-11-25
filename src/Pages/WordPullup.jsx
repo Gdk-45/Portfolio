@@ -48,9 +48,9 @@ const QuoteAnimation = () => {
   }, []);
 
   return (
-    <div className="container h-screen justify-center align-middle items-center bg-black text-white w-screen">
+    <div className="container h-screen justify-center align-middle items-center flex md:flex-col lg:flex-row bg-black text-white w-screen">
   <div
-    className="flex flex-wrap justify-center items-center gap-4 md:flex-col lg:flex-row h-screen w-screen"
+    className="flex flex-col md:flex-row justify-center items-center gap-4 h-screen w-screen"
   >
     {["Simplicity", "Conveys", "Clarity"].map((text, index) => (
       <div

@@ -1,11 +1,9 @@
 #container {
   margin: 3% 10% 0 10%;
   overflow: hidden;
-  display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  flex-direction: column;
 }
 
 #quote {

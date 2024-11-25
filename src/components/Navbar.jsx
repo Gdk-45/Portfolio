@@ -32,14 +32,14 @@ function Navbar() {
 
   return (
     <div className='fixed w-full z-20 flex justify-center items-center align-middle p-5'>
-    <nav className="w-[85%] bg-white/10 backdrop-blur-md shadow-lg z-50 rounded-[30px] px-5" id='navbar'>
+    <nav className="w-[85%] bg-white/10 backdrop-blur-md shadow-lg z-50 rounded-[30px]" id='navbar'>
         <div
-          className="max-w-7xl mx-auto p-5 flex items-center justify-between h-16"
+          className="max-w-7xl mx-auto p-2 flex items-center justify-between h-16"
           data-aos="fade-in"
         >
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden md:flex space-x-6 px-2">
             <button
               className="text-neutral-400 font-light hover:text-neutral-100 transition duration-300"
               onClick={() => scrollToSection("About")}
@@ -62,7 +62,7 @@ function Navbar() {
             <ShiftingDropDown2/>
            </div>
           <div
-            className="font-blod font-serif text-white"
+            className="font-blod font-serif text-white justify-center items-center"
             onClick={() => scrollToSection("home")}
             id='tel'
           >
