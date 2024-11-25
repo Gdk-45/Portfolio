@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { ShiftingDropDown } from './DropDown';
 import "../index.css"
+import "./Navbar.css"
+import name from "../assets/Ajay.svg"
 import { ShiftingDropDown2 } from './DropDown2';
 
 function Navbar() {
@@ -30,7 +32,7 @@ function Navbar() {
 
   return (
     <div className='fixed w-full z-20 flex justify-center items-center align-middle p-5'>
-    <nav className="w-[85%] bg-white/10 backdrop-blur-md shadow-lg z-50 rounded-[30px]" id='navbar'>
+    <nav className="w-[85%] bg-white/10 backdrop-blur-md shadow-lg z-50 rounded-[30px] px-5" id='navbar'>
         <div
           className="max-w-7xl mx-auto p-5 flex items-center justify-between h-16"
           data-aos="fade-in"
@@ -60,11 +62,11 @@ function Navbar() {
             <ShiftingDropDown2/>
            </div>
           <div
-            className="text-lg font-blod font-serif text-white cursor-pointer text-left bg-[#455CE9] rounded-[30px] text-white p-2 px-2 py-2"
+            className="font-blod font-serif text-white"
             onClick={() => scrollToSection("home")}
             id='tel'
           >
-          అజయ్          
+          <img src={name} className='w-[75%] h-[75%]'/>
           </div>
 
         </div>

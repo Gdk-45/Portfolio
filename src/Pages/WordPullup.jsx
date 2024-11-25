@@ -1,61 +1,77 @@
-import { useEffect, useState } from "react";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { useNavigate } from "react-router";
-
-const quotes = ["Simplicity", "Conveys", "Clarity"]; // Fixed typo "Simplicty" to "Simplicity"
-
-const WordPullUp = ({ words, className }) => {
-  return (
-    <div className={className}>
-      {words.split(" ").map((word, index) => (
-        <span key={index} className="word">
-          {word}
-        </span>
-      ))}
-    </div>
-  );
-};
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import "./Wordpull.css";
 
 const QuoteAnimation = () => {
-  const [currentQuote, setCurrentQuote] = useState(quotes[0]);
-  const [quoteIndex, setQuoteIndex] = useState(0);
+  const quotesRef = useRef([]);
+  const buttonRef = useRef(null);
   const router = useNavigate();
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1500,
-    });
-  }, []);
-
   useEffect(() => {
     const timeout = setTimeout(() => {
       router("/MainPage");
-    }, 6000); // Redirect after 3 seconds
+    }, 2000); // Redirect after 3 seconds
     return () => clearTimeout(timeout);
   }, []);
 
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      setQuoteIndex((prevIndex) => {
-        const nextIndex = (prevIndex + 1) % quotes.length;
-        setCurrentQuote(quotes[nextIndex]); // Update the quote directly after calculating the next index
-        return nextIndex;
+    const quotes = quotesRef.current;
+
+    quotes.forEach((quote) => {
+      const text = quote.textContent;
+      quote.innerHTML = text
+        .split("")
+        .map((char) => `<span class="char">${char}</span>`)
+        .join("");
+
+      const chars = quote.querySelectorAll(".char");
+
+      gsap.set(quote, { perspective: 400 });
+
+      const tl = gsap.timeline().from(chars, {
+        duration: 5,
+        opacity: 0,
+        scale: 0,
+        y: 80,
+        rotationX: 180,
+        transformOrigin: "0% 50% -50",
+        ease: "back",
+        stagger: 0.1,
       });
-    }, 2000); // Change quote every 2 seconds
-    return () => clearInterval(interval);
-  }, []); // This effect should run only once when the component mounts
+
+      if (buttonRef.current) {
+        buttonRef.current.onclick = () => tl.restart();
+      }
+    });
+  }, []);
 
   return (
-    <div className="bg-black h-screen flex justify-center items-center p-40">
-      <div data-aos="zoom-in" className="text-center">
-        <WordPullUp
-          className="text-7xl md:text-4xl lg:text-9xl font-light text-white bg-black font-sourGummy"
-          words={currentQuote}
-        />
+    <div className="container h-screen justify-center align-middle items-center bg-black text-white w-screen">
+  <div
+    className="flex flex-wrap justify-center items-center gap-4 md:flex-col lg:flex-row h-screen w-screen"
+  >
+    {["Simplicity", "Conveys", "Clarity"].map((text, index) => (
+      <div
+        id="quote"
+        key={index}
+        ref={(el) => (quotesRef.current[index] = el)}
+        className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-4 px-2"
+      >
+        {text}
       </div>
-    </div>
+    ))}
+  </div>
+  <button
+    id="animate"
+    className="fixed"
+    ref={buttonRef}
+    >
+    
+  </button>
+</div>
+
   );
 };
 

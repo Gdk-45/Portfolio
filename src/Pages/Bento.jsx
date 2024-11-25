@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import TextShpere from '../components/TextShpere';
 
 const AchievementsTable = () => {
   useEffect(() => {
@@ -198,7 +199,7 @@ const AchievementsTable = () => {
     Skills
   </h1>
   <div className="relative space-y-6 md:space-y-8" data-aos="fade-left">
-    <div className="flex flex-wrap gap-6 justify-center sm:justify-start p-20">
+    {/* <div className="flex flex-wrap gap-6 justify-center sm:justify-start p-20">
       {skills.map((skill, index) => (
         <span
           key={index}
@@ -207,7 +208,9 @@ const AchievementsTable = () => {
           {skill}
         </span>
       ))}
-    </div>
+
+    </div> */}
+    <TextShpere/>
   </div>
 </div>
 
@@ -219,7 +222,7 @@ const AchievementsTable = () => {
           {education.map((edu, index) => (
             <div
               key={index}
-              className="flex flex-col sm:flex-row items-start sm:items-center gap-6 md:gap-10 p-4 md:p-6 rounded-lg"
+              className="flex flex-col sm:flex-row items-start sm:items-center gap-6 md:gap-10 p-4 md:p-6 rounded-sm"
             >
               <div
                 className="text-sm md:text-lg font-semibold text-neutral-600 w-full sm:text-center"
@@ -245,7 +248,7 @@ const AchievementsTable = () => {
           ))}
         </div>
       </div>
-      <div id="Exp" className="h-auto pt-8 backdrop-blur-lg">
+      <div id="Exp" className="h-auto pt-8 backdrop-blur-sm">
         <h1 className="text-3xl md:text-3xl lg:text-5xl font-light mt-12 mb-6 text-center text-white">
           Experience
         </h1>

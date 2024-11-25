@@ -38,14 +38,18 @@ function Home() {
   };
 
   return (
-    <main className="h-full flex flex-col bg-black overflow-x-hidden">
+    <main className="h-full flex flex-col  overflow-x-hidden">
       <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center align-middle opacity-40">
-      <div className="w-52 h-52 pulse bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 opacity-80">
+      <div className="w-52 h-52 pulse bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 opacity-100">
           <span style={{ "--i": 0 }}></span>
           <span style={{ "--i": 1 }}></span>
           <span style={{ "--i": 2 }}></span>
           <span style={{ "--i": 3 }}></span>
       </div>
+      {/* <div id="cloud">float</div>
+      <div id="cloud" className="bottom-10">float</div>
+      <div id="cloud" className="right-1 top-20">float</div>
+      <div id="cloud">float</div> */}
  
           {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 opacity-80 animate-pulse filter blur-xl"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full border-4 border-white opacity-40 animate-spin-slow"></div>
