@@ -242,7 +242,7 @@ const Blog = () => {
           Learn the basics of STL in C++ and their applications in solving problems.
         </p>
         <button className="ml-auto mt-4 flex items-center gap-1 text-xs text-indigo-300">
-        <a href="https://www.youtube.com/@Dsa_withjay">View more</a>
+        <a href="https://www.youtube.com/@Dsa_withjay">YouTube Channel</a>
         <FiArrowRight />
       </button>
       </div>
@@ -257,7 +257,7 @@ const Blog = () => {
         <h4 className="mb-0.5 text-xs font-medium">Damo Leetcode</h4>
         <div className="text-xs text-neutral-400 h-20">This all My Dsa Journey if you want see more click on the below</div>
          <button className="ml-auto mt-4 flex items-center gap-1 text-xs text-indigo-300">
-        <a href="https://leetcode.com/u/dattuajay005/">View Profile</a>
+        <a href="https://leetcode.com/u/dattuajay005/">LeetCode</a>
         <FiArrowRight />
         </button>
       </div>
