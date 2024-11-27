@@ -151,7 +151,7 @@ const AchievementsTable = () => {
   ];
 
   return (
-    <div className="h-full flex flex-col p-4 md:p-6 lg:p-10 space-y-16 backdrop-blur-lg">
+    <div className="h-full flex flex-col p-4 md:p-6 lg:p-10 space-y-16 backdrop-blur-md">
       {/* Education Section */}
       <div id="work" className="h-auto pt-8">
   <h1 className="text-3xl md:text-3xl lg:text-5xl font-light mt-12 mb-6 text-center text-white">

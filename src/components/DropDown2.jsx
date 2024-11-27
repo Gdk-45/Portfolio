@@ -201,8 +201,8 @@ const MENU_ITEMS = [
 
 const Blog = () => {
   return (
-    <div>
-      <div className="grid grid-cols-2 gap-2">
+   <div className="grid grid-cols-2 gap-5">
+      <div className="">
         <iframe
           src="https://www.youtube.com/embed/rk7jC7I7KRQ?si=FCWlbhOut700_D7N"
           title="YouTube video player"
@@ -211,21 +211,30 @@ const Blog = () => {
           className="w-full h-36"
         ></iframe>
         <h4 className="mb-0.5 text-xs font-medium">DSA with Jay: C++ STL</h4>
-        <p className="text-xs text-neutral-400">
+        <p className="text-xs text-neutral-400 h-20">
           Learn the basics of STL in C++ and their applications in solving problems.
         </p>
-        <p>
+        <button className="ml-auto mt-4 flex items-center gap-1 text-xs text-indigo-300">
+        <a href="https://www.youtube.com/@Dsa_withjay">View more</a>
+        <FiArrowRight />
+      </button>
+      </div>
+      <div><p>
           <img
             align="center"
             src="https://leetcard.jacoblin.cool/dattuajay005?theme=dark&font=Encode%20Sans%20Semi%20Expanded&ext=heatmap"
             alt="LeetCode Stats"
+            className="h-36"
           />
         </p>
-      </div>
-      <button className="ml-auto mt-4 flex items-center gap-1 text-xs text-indigo-300">
-        <a href="https://www.youtube.com/@Dsa_withjay">View more</a>
+        <h4 className="mb-0.5 text-xs font-medium">Damo Leetcode</h4>
+        <div className="text-xs text-neutral-400 h-20">This all My Dsa Journey if you want see more click on the below</div>
+         <button className="ml-auto mt-4 flex items-center gap-1 text-xs text-indigo-300">
+        <a href="https://leetcode.com/u/dattuajay005/">View Profile</a>
         <FiArrowRight />
-      </button>
+        </button>
+      </div>
+      
     </div>
   );
 };
