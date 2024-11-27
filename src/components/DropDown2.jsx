@@ -202,7 +202,7 @@ const MENU_ITEMS = [
 const Blog = () => {
   return (
     <div>
-      <div className="grid grid-cols-1 gap-2">
+      <div className="grid grid-cols-2 gap-2">
         <iframe
           src="https://www.youtube.com/embed/rk7jC7I7KRQ?si=FCWlbhOut700_D7N"
           title="YouTube video player"
@@ -213,6 +213,13 @@ const Blog = () => {
         <h4 className="mb-0.5 text-xs font-medium">DSA with Jay: C++ STL</h4>
         <p className="text-xs text-neutral-400">
           Learn the basics of STL in C++ and their applications in solving problems.
+        </p>
+        <p>
+          <img
+            align="center"
+            src="https://leetcard.jacoblin.cool/dattuajay005?theme=dark&font=Encode%20Sans%20Semi%20Expanded&ext=heatmap"
+            alt="LeetCode Stats"
+          />
         </p>
       </div>
       <button className="ml-auto mt-4 flex items-center gap-1 text-xs text-indigo-300">
