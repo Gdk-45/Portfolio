@@ -6,7 +6,7 @@ import TextShpere from '../components/TextShpere';
 const AchievementsTable = () => {
   useEffect(() => {
     AOS.init({
-      duration: 2000,
+      duration: 1500,
     });
   }, []);
 
@@ -195,7 +195,7 @@ const AchievementsTable = () => {
   </div>
 </div>
       <div id="skills" className="h-auto pt-8">
-  <h1 className="text-3xl md:text-3xl lg:text-5xl font-light mt-12 mb-6 text-center text-white">
+  <h1 className="text-3xl md:text-3xl lg:text-5xl font-light mt-12 mb-6 text-center text-white" data-aos="zoom-out-down">
     Skills
   </h1>
   <div className="relative space-y-6 md:space-y-8" data-aos="fade-left">
@@ -215,7 +215,7 @@ const AchievementsTable = () => {
 </div>
 
       <div id="edu" className="h-auto pt-8">
-        <h1 className="text-3xl md:text-3xl lg:text-5xl font-light mt-12 mb-6 text-center text-white">
+        <h1 className="text-3xl md:text-3xl lg:text-5xl font-light mt-12 mb-6 text-center text-white" data-aos="zoom-out-down">
           Education
         </h1>
         <div className="relative space-y-6 md:space-y-8">
@@ -249,7 +249,7 @@ const AchievementsTable = () => {
         </div>
       </div>
       <div id="Exp" className="h-auto pt-8 backdrop-blur-sm">
-        <h1 className="text-3xl md:text-3xl lg:text-5xl font-light mt-12 mb-6 text-center text-white">
+        <h1 className="text-3xl md:text-3xl lg:text-5xl font-light mt-12 mb-6 text-center text-white" data-aos="zoom-out-down" >
           Experience
         </h1>
         <div className="space-y-6 md:space-y-8">
@@ -294,7 +294,7 @@ const AchievementsTable = () => {
 
       {/* Achievements Section */}
       <div id="Ach" className="h-auto pt-8 backdrop-blur-lg">
-        <h1 className="text-3xl md:text-3xl lg:text-5xl font-light mt-12 mb-6 text-center text-white">
+        <h1 className="text-3xl md:text-3xl lg:text-5xl font-light mt-12 mb-6 text-center text-white" data-aos="zoom-out-down" >
           Achievements
         </h1>
         <div className="relative space-y-6 md:space-y-8">

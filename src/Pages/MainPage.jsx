@@ -57,15 +57,15 @@ function Home() {
         </div>
       <Navbar/>
       <div id="home" className="h-screen relative flex flex-col pt-20 backdrop-blur-sm">
-        <div className="flex flex-col lg:flex-row w-full h-full md:gap-5 lg:gap-0" data-aos="fade-left">
-          <div className="flex w-full h-64 lg:h-auto align-middle items-center justify-center">
+        <div className="flex flex-col lg:flex-row w-full h-full md:gap-5 lg:gap-0">
+          <div className="flex w-full h-64 lg:h-auto align-middle items-center justify-center" data-aos="zoom-in-up">
             <Lottie
               animationData={animationData1}
               loop={true}
               className="w-full h-[60%] opacity-75 rounded-md"
             />
           </div>
-          <div className="flex flex-col w-full align-middle items-center justify-center gap-5 p-10" data-aos="fade-right">
+          <div className="flex flex-col w-full align-middle items-center justify-center gap-5 p-10" data-aos="zoom-in-down">
             <div className="text-base w-full text-left sm:text-lg md:text-xl lg:text-2xl font-light text-gray-400 max-w-3xl mx-auto">
               <div className="flex flex-col gap-5">
                 <p className="text-left w-full md:text-3x lg:text-5xl font-light text-white mx-auto">I am Ajay Dattu,</p>
