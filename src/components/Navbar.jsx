@@ -32,7 +32,7 @@ function Navbar() {
 
   return (
     <div className='fixed w-full z-20 flex justify-center items-center align-middle p-5'>
-    <nav className="w-[85%] bg-white/10 backdrop-blur-md shadow-lg z-50 rounded-[20px]" id='navbar'>
+    <nav className="w-[85%] shadow-lg z-50 rounded-[20px]" id='navbar'>
         <div
           className="max-w-7xl mx-auto p-2 flex items-center justify-between h-16"
           data-aos="fade-in"
