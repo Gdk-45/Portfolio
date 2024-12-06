@@ -55,7 +55,7 @@ const AchievementsTable = () => {
     description:
       'Developed a full-stack e-commerce platform with a seamless and responsive user interface. This project taught me how to handle state management with Redux, implement secure user authentication, and design intuitive layouts for better user experiences.',
     techStack: ['MERN', 'Redux', 'Ant Design', 'TailwindCSS'],
-    link: 'https://github.com/Arshpreet-Singh0/E-Commerce.git',
+    link: 'https://www.shopitworld.in/',
   },
   {
     video: 'https://res.cloudinary.com/dyny7wc0n/video/upload/v1731750106/xbrmgcrdbzucxcatqd3l.mp4',
@@ -187,7 +187,7 @@ const AchievementsTable = () => {
             {project.techStack.join(', ')}
           </div>
           <a className="text-xs md:text-sm text-gray-400" href={project.link}>
-            Source Code
+            Link
           </a>
         </div>
       </div>
