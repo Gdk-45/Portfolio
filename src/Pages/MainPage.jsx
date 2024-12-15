@@ -16,7 +16,7 @@ function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    AOS.init({ duration: 2000 });
+    AOS.init({ duration: 500 ,once:true});
 
     const handleScroll = () => {
       setShowScrollButton(window.scrollY > 300);
@@ -58,17 +58,17 @@ function Home() {
       <Navbar/>
       <div id="home" className="h-screen relative flex flex-col pt-20 backdrop-blur-sm">
         <div className="flex flex-col lg:flex-row w-full h-full md:gap-5 lg:gap-0">
-          <div className="flex w-full h-64 lg:h-auto align-middle items-center justify-center" data-aos="zoom-in-up">
+          <div className="flex w-full h-64 lg:h-auto align-middle items-center justify-center" data-aos="fade-in">
             <Lottie
               animationData={animationData1}
-              loop={true}
+              loop={false}
               className="w-full h-[60%] opacity-75 rounded-md"
             />
           </div>
-          <div className="flex flex-col w-full align-middle items-center justify-center gap-5 p-10" data-aos="zoom-in-down">
+          <div className="flex flex-col w-full align-middle items-center justify-center gap-5 p-10" data-aos="fade-in">
             <div className="text-base w-full text-left sm:text-lg md:text-xl lg:text-2xl font-light text-gray-400 max-w-3xl mx-auto">
               <div className="flex flex-col gap-5">
-                <p className="text-left w-full md:text-3x lg:text-5xl font-light text-white mx-auto">I am Ajay Dattu,</p>
+                <p className="text-left w-full md:text-3x lg:text-5xl font-light text-white mx-auto">My Name is Ajay Dattu,</p>
                 <p> a final-year B.Tech student in Computer Science. I specialize in building beautiful, interactive web applications using modern technologies such as Next.js, React.js, animation libraries, UI libraries, and Tailwind CSS. I am constantly exploring new tools and frameworks to create optimized user experiences.
                 </p>
                 <a
