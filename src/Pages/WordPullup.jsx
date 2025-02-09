@@ -16,7 +16,7 @@ const QuoteAnimation = () => {
   return (
     <div className="h-screen flex justify-center items-center bg-black gap-5">
       <motion.h2
-        className="text-white text-4xl font-light"
+        className="text-white text-xl md:text-4xl font-light"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
@@ -24,15 +24,15 @@ const QuoteAnimation = () => {
         Simplicity
       </motion.h2>
       <motion.h1
-        className="text-white text-4xl font-bold"
-        initial={{ opacity: 0, y: 30 }}
+        className="text-white text-xl md:text-4xl font-bold"
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut",delay:1 }}
       >
         conveys 
       </motion.h1>
       <motion.h2
-        className="text-white text-4xl font-light"
+        className="text-white text-xl md:text-4xl font-light"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5, ease: "easeOut",delay:2 }}
