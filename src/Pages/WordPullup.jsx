@@ -1,38 +1,44 @@
-import { useNavigate } from "react-router";
-import React, { useEffect, useRef } from "react";
-import "./Wordpull.css";
+import { useNavigate } from "react-router-dom"; // Updated import for react-router-dom
+import React, { useEffect } from "react";
+import { motion } from "framer-motion";
 
 const QuoteAnimation = () => {
-  const router = useNavigate();
-  const videoRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const handleVideoEnd = () => {
-      router("/MainPage"); // Redirect when the video ends
-    };
+    const timer = setTimeout(() => {
+      navigate("/MainPage");
+    },4000);
 
-    const videoElement = videoRef.current;
-    if (videoElement) {
-      videoElement.addEventListener("ended", handleVideoEnd);
-    }
-
-    return () => {
-      if (videoElement) {
-        videoElement.removeEventListener("ended", handleVideoEnd);
-      }
-    };
-  }, [router]);
+    return () => clearTimeout(timer); // Cleanup timeout on unmount
+  }, [navigate]);
 
   return (
-    <div className="h-screen justify-center items-center align-middle">
-      <video
-        ref={videoRef}
-        src="https://res.cloudinary.com/dxxics5nv/video/upload/v1732725671/Simplicity_Conveys_Clarity._wizfir.mp4"
-        autoPlay
-        muted
-        loop={false}
-        className="w-full h-screen"
-      />
+    <div className="h-screen flex justify-center items-center bg-black gap-5">
+      <motion.h2
+        className="text-white text-4xl font-light"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
+        Simplicity
+      </motion.h2>
+      <motion.h1
+        className="text-white text-4xl font-bold"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut",delay:1 }}
+      >
+        conveys 
+      </motion.h1>
+      <motion.h2
+        className="text-white text-4xl font-light"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.5, ease: "easeOut",delay:2 }}
+      >
+        clarity.
+      </motion.h2>
     </div>
   );
 };
