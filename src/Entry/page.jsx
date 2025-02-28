@@ -22,9 +22,6 @@ export default function Entry() {
   const size = isHovered ? 400 : 40;
   return (
     <div className="main" data-aos="fade-in">
-         <button className='fixed top-0 right-3 font-light text-white z-30 text-5xl' onClick={handleclick}>X</button>
-          <div className="fixed">
-          </div>
           <motion.div 
             className="mask"
             animate={{
@@ -34,12 +31,12 @@ export default function Entry() {
             transition={{ type: "tween", ease: "backOut", duration:0.5}}
           >
             <p onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)}} className='pa'>
-              <img className="w-[100%] h-[50%]" src="https://media.licdn.com/dms/image/v2/D5622AQFhdV8IDlDG9Q/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1709402884622?e=1733961600&v=beta&t=j2nVEMwjGt1W7timW0gIKSeHeTtQn2GlETpUdFpcY7k"/>
+              <img className="w-[100%] h-[50%]" src="https://res.cloudinary.com/dxxics5nv/image/upload/v1740746143/1709402884622_zuzvzh.jpg"/>
             </p>
           </motion.div>
           
-          <div className="body"> 
-            <p  className='font-light'>Hi, I'm <span className='spa'>Ajay Dattu</span>, but everyone calls me Damo. I'm from India.</p>
+          <div className="body p-10"> 
+            <p  className='text-white  text-center'>Welcome! If you’re here to know more  <span className='spa'>about me </span> you’re in the right place.</p>
           </div>
     </div>
   );
