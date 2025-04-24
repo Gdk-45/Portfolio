@@ -3,11 +3,14 @@
 @tailwind utilities;
 body{
   overflow-x: hidden;  
-  cursor: url('./assets/cursor.svg') 10 10, default;
-  background-color: black;
+  cursor: url('./assets/thanoscursor.png'), default;
+  background-color: #000000;
 }
 body button{
-   cursor: url('./assets/left-click.svg') 10 10 pointer;
+   cursor: url('./assets/buttoncursor.png'),pointer;
+}
+body a {
+  cursor: url('./assets/buttoncursor.png'), pointer;
 }
 #tel{
   font-family: "Ponnala", system-ui;

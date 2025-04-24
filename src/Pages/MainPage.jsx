@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Lottie from "lottie-react";
@@ -13,7 +13,6 @@ import './Pulse.css'
 
 function Home() {
   const [showScrollButton, setShowScrollButton] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     AOS.init({ duration: 500 ,once:true});
@@ -25,13 +24,6 @@ function Home() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -73,7 +65,7 @@ function Home() {
                 </p>
                 <a
                 href="https://drive.google.com/file/d/1_rripGFNuVqSaylO1n2LiyRwdJCDFJJR/view?usp=sharing"
-                className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-neutral-100 cursor-pointer hover:underline"
+                className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-neutral-100 hover:underline"
               >
                 Download Resume
               </a>
