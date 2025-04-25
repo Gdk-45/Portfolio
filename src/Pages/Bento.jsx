@@ -12,33 +12,25 @@ const AchievementsTable = () => {
 
   const achievements = [
     {
-      year: '2023',
-      title: 'SIH Finalist',
-      description:
-        'Developed an Intrusion Detection System using PyQt5 and PyShark for the Smart India Hackathon.',
-      technologies: ['PyQt5', 'PyShark'],
-    },
-    {
-      year: '2023',
-      title: 'ECET Rank 79',
-      description:
-        'Achieved 79th rank in AP ECET, a state-level engineering entrance examination.',
-      technologies: [],
-    },
-    {
       year: '2024',
-      title: 'Best Impactful Solution',
-      description:
-        'Developed a decentralized voting system using MERN stack, Web3, Blockchain, Solidity, and Ethereum for Prajwala Hackathon.',
-      technologies: ['MERN', 'Web3', 'Blockchain', 'Solidity', 'Ethereum'],
-    },
-    {
-      year: '2024',
-      title: 'Solved 550+ Problems',
+      title: 'Solved 250+ Problems',
       description:
         'LeetCode Problem Solving, solving over 550+ problems to sharpen algorithm and data structure skills.',
       technologies: [],
     },
+    {
+      year: '2023',
+      title: 'ECET Rank 30',
+      description:
+        'Achieved 30th rank in AP ECET, a state-level engineering entrance examination.',
+      technologies: [],
+    },
+    {
+      year: '2019',
+      title: 'Dr. APJ Abdul Kalam Vidya Puraskar',
+      description: 'Awarded for maintaining excellent educational standards through academics.'
+
+    
   ];
  const videoData = [
   {
@@ -111,14 +103,14 @@ const AchievementsTable = () => {
     {
   "year": "2024",
   "title": "Full Stack Developer Intern",
-  "description": "Worked as a full-stack developer intern at BlackBucks Company, developing web applications using React and Node.js. Focused on understanding client-server architecture and creating responsive designs, particularly emphasizing frontend development. Gained experience with various UI frameworks such as Ant Design, Material-UI, and Chakra UI. Additionally, learned API testing using Postman, resolved Git conflicts, and collaborated effectively with a team.",
-  "technologies": ["React", "Node.js", "Express.js", "MongoDB", "Ant Design", "Material-UI", "Chakra UI", "Postman", "Git"]
+  "description": "Worked as a full-stack developer intern at AICTE, developing web applications using React and Node.js. Focused on understanding client-server architecture and creating responsive designs, particularly emphasizing frontend development. Gained experience with various UI frameworks such as Ant Design, Material-UI, and Chakra UI. Additionally, learned API testing using Postman, resolved Git conflicts, and collaborated effectively with a team.",
+  "technologies": ["React", "Node.js", "Express.js", "MongoDB"]
 },
    {
   "year": "2023",
-  "title": "Java Developer Intern",
-  "description": "Worked as a Java developer intern at Henotic Technologies, building Java-based backend services and APIs. Additionally, focused on frontend development using JavaFX and Java Swing. Developed a Sudoku game project, gaining hands-on experience in desktop application development. Utilized backtracking algorithms to implement the solution for the Sudoku problem, enhancing problem-solving and backend development skills.",
-  "technologies": ["Java","JavaFX", "Java Swing", "Backtracking"]
+  "title": "Infosys Springboard Intern",
+  "description": "Worked as an intern , building Retrieval Augmented Generation(RAG) model.focused on developing RAG model which is used to respond for user query by return the relevant data based on the user query ",
+  "Technologies": ["Python","Pandas","Numpy","Matplotlib","Pytorch","lang-chain community","Gradio"]
 }
 
   ];
@@ -127,28 +119,26 @@ const AchievementsTable = () => {
     {
       year: '2022-2025',
       title: 'BTech in Computer Science',
-      institution: 'SRKR Engineering College',
-      location: 'Bhimavaram, Andhra Pradesh',
+      institution: 'Andhra University College Of Engineering',
+      location: 'Visakhapatnam, Andhra Pradesh',
     },
     {
       year: '2019-2022',
       title: 'Diploma in Engineering',
-      institution: 'AANM VVSRS Polytechnic',
+      institution: 'AANM & VVSR Polytechnic',
       location: 'Gudlavalleru, Andhra Pradesh',
     },
     {
       year: '2018-2019',
-      title: 'High School',
-      institution: 'SJRVV High School',
-      location: 'Unguturu, Andhra Pradesh',
+      title: 'Secondary School Education',
+      institution: 'SPPRR ZP High School',
+      location: 'Tallapudi, Andhra Pradesh',
     },
   ];
 
   const skills = [
-    'React', 'Node.js', 'Express.js', 'MongoDB', 'Java', 'MySQL', 
-    'Solidity', 'Ethereum', 'Blockchain', 'Web3', 'Git', 'JavaScript', 'HTML5', 'Next','Gsap',
-    'CSS3', 'Tailwind CSS', 'Redux', 'TypeScript', 'Python', 'PyQt5', 'LeetCode', 'Problem Solving'
-  ];
+    'C','C++','Java','JavaScript', 'React', 'Node.js', 'Express.js', 'MongoDB', 'SQL', 'MySQL', 
+     'Git', 'HTML5','CSS3', 'Tailwind CSS',  'LeetCode', 'Problem Solving'];
 
   return (
     <div className="h-full flex flex-col p-4 md:p-6 lg:p-10 space-y-16 backdrop-blur-md">
